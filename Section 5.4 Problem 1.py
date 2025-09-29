@@ -1,3 +1,11 @@
+Name:        module1
+# Purpose:
+#
+# Author:      Lilyj
+#
+# Created:     25/09/2025
+# Copyright:   (c) Lilyj 2025
+# Licence:     <your licence>
 num = 0
 while num <= 7:
     num += 1
@@ -15,3 +23,4 @@ while num <= 7:
         print('Saturday')
     elif num == 7:
         print('Sunday')
+
