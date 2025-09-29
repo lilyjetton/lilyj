@@ -1,4 +1,4 @@
-Name:        module1
+Name:        Chapter 5, Section 5.14, Problem 1
 # Purpose:
 #
 # Author:      Lilyj
@@ -23,4 +23,5 @@ while num <= 7:
         print('Saturday')
     elif num == 7:
         print('Sunday')
+
 
