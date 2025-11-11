@@ -1,0 +1,24 @@
+Lily,
+You are missing the home work from chapter 8.
+You submission for chapter 20 does not produce the intended output, you also did not include the alice.txt file
+Your submission for chapter 11 does not do what is asked and does not test the code that was included as part of the problem.
+
+Here is the problem from the book:
+Write a function replace(s, old, new) that replaces all occurrences of old with new in a string s:
+
+test(replace("Mississippi", "i", "I") == "MIssIssIppI")
+
+s = "I love spom! Spom is my favorite food. Spom, spom, yum!"
+test(replace(s, "om", "am") ==
+    "I love spam! Spam is my favorite food. Spam, spam, yum!")
+
+test(replace(s, "o", "a") ==
+    "I lave spam! Spam is my favarite faad. Spam, spam, yum!")
+Hint: use the split and join methods.
+
+
+You were given partial credit for the submissions.
+
+Lastly, I know we talked via email and you indicated you felt an in person class would be better for you, however you ended up not staying for most of the classes
+and also sought an outside tutor. I have no issue with someone getting a tutor but the tutors tend to not use the material we are using, and your programs
+end up not following the book. I tried to make myself available so you would not need outside help. Did I fail in some way that you felt you needed a tutor?
