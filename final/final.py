@@ -1,3 +1,6 @@
+import random
+
+
 def readboard(filename):
     # Open the file and read all lines without newline characters
     with open(filename, "r") as f:
@@ -6,9 +9,8 @@ def readboard(filename):
     return board
 def menu():
     print("\n--- MENU ---")
-    print("1. View Board")
-    print("2. Make a Move")
-    print("3. Quit")
+    print("1. Play Game")
+    print("2. Quit")
     choice = input("Choose an option: ")
     return choice
 
@@ -27,23 +29,54 @@ def playermakemove(board):
         board[x][y] = "+"
     if board[x][y] == "0": # checking if theres a miss 
         board[x][y] = "x"
+def computermakemove(board):
+# Generate a random integer between 0 and 5
+    x = random.randint(0, 5)
+    y = random.randint(0, 5)
+    if board[x][y] == "1": # checking if its a hit
+        board[x][y] = "+"
+    if board[x][y] == "0": # checking if theres a miss 
+        board[x][y] = "x"
 
+def checkWin(board):
+    endGame = True
+    for row in board:
+        if "1" in row:
+            endGame = False
+
+    return endGame
+
+def gamefunction(playerboard,computerboard):
+    
+    while True:
+        
+        printboard(computerboard)
+        playermakemove(computerboard)
+        printboard(computerboard)
+        #call check win and see if player won
+        #if player won, break out of loop
+        
+        printboard(playerboard)
+        computermakemove(playerboard)
+        printboard(playerboard)
+        #call checkwin and see if computer won
+        #if computer won, break out of loop
+       
 def main():
      # Read the game board from the text file
     playerBoard = readboard("battleship.txt")
+    computerBoard = readboard("computerboard.txt")
+    
     while True:
         choice = menu()
 
         if choice == "1":
-            printboard(playerBoard)
+           gamefunction(playerBoard,computerBoard) 
+            #call game function
 
         elif choice == "2":
-            playermakemove(playerBoard)
-
-        elif choice == "3":
             print("Goodbye!")
             break
-
         else:
             print("Invalid choice, try again.")
 
